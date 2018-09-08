@@ -1,2 +1,2 @@
 # First-Year
-First year coding projects at the University of Otago for a BSc in Computer Science
+First year labs for COMP160 at the University of Otago for a BSc in Computer Science
