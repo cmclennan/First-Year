@@ -1,0 +1,17 @@
+public class Plane {
+  
+  public static void main(String [] args){
+  
+    int childNum = 50;
+    int adultNum = 50;
+    int maxNum = 135;
+   
+
+    if(childNum + adultNum < maxNum){
+      System.out.println(" true");
+    } else {
+      System.out.println("false");
+    }
+  }
+}
+    

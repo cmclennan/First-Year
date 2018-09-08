@@ -1,0 +1,19 @@
+public class Classroom {
+  private int seats;
+  private double area;
+  private String name;
+  
+  public Classroom( double areaIn) {
+  }
+  
+  public Classroom() {
+  }
+  
+  public void setArea(double areaIn) {
+  }
+  
+  public double getArea() {
+    return area;
+  }
+  
+}

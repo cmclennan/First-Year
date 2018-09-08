@@ -1,0 +1,24 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class TablePanel extends JPanel{
+  private Diner diner1, diner2, diner3, diner4, diner5, diner6;
+  
+  public TablePanel(){
+    diner1 = new Diner(/** make coord system above*/, name, color.color, number assigned);
+  }
+  //draw diners
+  public void paintComponent(Graphics d){
+    super.paintComponent(d);
+    
+    diner1.draw(d);
+    
+    
+    d.setColor(Color.black);
+    d.fillRect(/**coords here to build table, e.g start point, and length and height from there*/);
+  }
+}
+                       
+                         
+                         
+                         

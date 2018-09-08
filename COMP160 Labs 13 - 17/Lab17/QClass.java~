@@ -1,0 +1,17 @@
+public class QClass {
+  private int number;
+
+  public QClass( int num) {
+  }
+  
+  public QClass() {
+  }
+  
+  public void setNumber(int num) {
+  }
+  
+  public void display() {
+    return area;
+  }
+  
+}

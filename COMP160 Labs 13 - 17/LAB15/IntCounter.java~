@@ -1,0 +1,30 @@
+public class IntCounter {
+  private int[] numArray;
+  
+
+  
+  public IntCounter(int[] g){
+    this.numArray = new int[g.length];    
+    this.numArray = g;
+  }
+  
+  
+  
+  public void showTarget(int target){
+    int count = 0;
+    for (int x : numArray){
+     System.out.print( x + " ");
+    } System.out.println("Array length is: " + numArray.length);
+    for (int base = 0; base < numArray.length; base+=1){
+      if(numArray[base] == target){
+        System.out.println("There is a " + target + " at position " + base + " in the array");
+        count++;
+      }
+    }
+    if (count == 0) {
+      System.out.println("there is no " + target + " in the array" + "\n");
+    }
+    }  
+  }
+
+    

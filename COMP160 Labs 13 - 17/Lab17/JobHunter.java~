@@ -1,0 +1,11 @@
+public class JobHunter {
+  private boolean hasDegree;
+  private boolean hasStudentLoan;
+  
+  public boolean isJobJunting(){
+    if (hasDegree && hasStudentLoad)
+      return true;
+  } else {
+    return false;
+  }
+}

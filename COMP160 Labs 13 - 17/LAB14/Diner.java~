@@ -1,0 +1,37 @@
+//seat generator
+public class Diner{
+  private int x;
+  private int y;
+  private String name;
+  private int seatNum;
+  private Color colour;
+  private final int diamater = 50;
+  
+  
+  public Diner(int x; int y; String name; int seatNum; Color colour){
+    this.x = x;
+    this.y = y;
+    this.name = name;
+    this.color = color;
+    this.seatNum = seatNum;
+  }
+  
+  
+  
+  
+  public void draw(Graphics g){
+    
+    g.setColor(color);
+    g.fillOval(x,y, diamater, diamater);
+    //sets font colour
+    g.setColor(Color.black);
+    g.setFont(new Font("Courier", Fint.PLAIN, 8));
+    g.drawString(name, x,y);//coords
+    
+    g.setFont(new Font("Helvetica", Font.BOLD, 14));
+    diner.drawString(Int.toString(this.seatNum),x,y);
+  }
+}
+              
+
+  

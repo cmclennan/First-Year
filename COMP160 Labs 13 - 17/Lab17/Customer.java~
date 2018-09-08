@@ -1,0 +1,27 @@
+public class Customer {
+ 
+  private boolean hasMoney;
+  private boolean hasCredit;
+ 
+  public boolean getHasMoney(){
+    return hasMoney = true;
+  }
+  public boolean getHasCredit(){
+    return hasCredit = false;
+  }
+   public boolean canPay(){
+      if (hasMoney || hasCredit){
+        return true;
+      } else {
+        return false;
+      }
+   }
+  public static void main(String[] args){
+    System.out.println(canPay);
+    
+}
+}
+
+
+
+  

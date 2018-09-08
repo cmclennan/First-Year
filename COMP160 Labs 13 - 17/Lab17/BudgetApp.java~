@@ -1,0 +1,8 @@
+public class BudgetApp {
+  public static void main(String[] args){
+    Budget budget1 = new Budget(200,100,75);
+    
+  }
+
+}
+  

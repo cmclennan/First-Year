@@ -1,0 +1,19 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class TableApp{
+  
+  public static void main(String[]args){
+  //creates instance of JFrame
+    JFrame frame = new JFrame("Table");
+    frame.setDefaultCloseOperation(JFrame);//
+ //calls table panel   
+    frame.getContentPane().add(new TablePanel());
+  
+  
+  
+    frame.pack();
+    frame.setVisible(true);
+  }
+}
+  //http://www.java2s.com/Code/JavaAPI/java.awt/GraphicsdrawStringStringstrintxinty.htm
