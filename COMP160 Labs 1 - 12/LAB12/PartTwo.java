@@ -1,0 +1,65 @@
+/** Lab 12 COMP160
+  * Cameron M
+  * August 2016
+  * Finds vowels within a user entered string
+  */
+import java.util.Scanner;
+
+public class PartTwo {
+  
+  /** Creates main loop where variables are stored and while loop character finder is located
+    * @param runs main which runs the while loop letter finder */
+  public static void main (String[] args) {
+    String input = userInput("Please enter a sentence: ");
+    int position = 0;
+    int vowelCount = 0;
+    int consonantCount = 0;
+    int length = input.length();
+    String convert = input.toLowerCase(); //sets the whole string to lower so the below while loop will run correctly
+
+    //while loop to find specific characters
+    while (position < length) {
+      if(convert.charAt(position) <  'a') {
+        position++;
+      } else {
+        switch(convert.charAt(position)) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+          vowelCount++; //increases vowelCount by 1 each time the criteria is met
+          break;
+          default:
+          consonantCount++; //increases consonantCount by 1 each time the criteria is met
+      }
+      position++; //increases position by 1 each time the while loop runs
+    }
+    }
+    System.out.println("Your sentence was: " + input);
+    System.out.println("Vowel count in sentence: " + vowelCount);
+    System.out.println("Consenant count in sentence: " + consonantCount);
+    
+  }//end method
+  
+  
+  /** Creates the scanner to scan for user entries
+    * @param runs userInput scanner creator to scan for user inputs */
+  public static String userInput(String output){
+    Scanner scan = new Scanner(System.in);
+    System.out.println(output);
+    return scan.nextLine();
+  }// end method
+    
+    
+  
+}// end class
+  
+  
+  
+
+
+         
+         
+
+          

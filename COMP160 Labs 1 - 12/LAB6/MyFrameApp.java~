@@ -1,0 +1,9 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class MyFrameApp extends JFrame {
+  myFrame m1 = new MyFrame();
+  m1.setSize(300, 150);
+  m1.setVisible(true);
+  
+}

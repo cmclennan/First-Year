@@ -1,0 +1,25 @@
+/** 
+Cameron M, August, 2016
+*/
+
+public class BookShopApp {
+  
+  public static void main(String[]args){
+    Book b1 = new Book();
+    b1.setTitle("Life of Pi");
+    b1.setPrice(28.90);
+    b1.setPages(348);
+
+    Book b2 = new Book();
+    b2.setTitle("Mister Pip");
+    b2.setPrice(22.70);
+    b2.setPages(240);
+    
+    Book b3 = new Book();
+    b3.setTitle("Java Foundations");
+    b3.setPrice(94.50);
+    b3.setPages(1074);
+    
+  }
+}
+    

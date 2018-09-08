@@ -1,0 +1,19 @@
+public class SongApp {
+  
+  public static void main(String[] args) {
+  
+  
+  Song song1 = new Song("While my guitar gently weeps");
+  Song song2 = new Song("Let it be");
+  Song song3 = new Song("Penny Lane");
+
+  System.out.println(song1.getSongLine());
+  System.out.println(song2.getSongLine());
+  System.out.println(song3.getSongLine());
+                             
+  song1.process();  
+  song2.process();
+  song3.process();
+}
+  
+}
