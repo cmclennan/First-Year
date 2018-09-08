@@ -1,0 +1,95 @@
+/** FilePanel.java
+ * Lab 20, COMP160,  2016
+ * 
+ * a JPanel which creates 2 instances of Rectangle objects, 
+ * stores them in an array, and draws them 
+ */
+
+import java.awt.*;
+import javax.swing.*;
+import java.io.*;
+import java.util.Scanner;
+
+public class FilePanel extends JPanel{
+  private Rectangle[] drawObjects = new Rectangle [10];
+  private int count;
+ 
+  
+  /**constructor instantiates 6 Rectangle objects*/
+  public FilePanel(){ 
+
+//    
+//    drawObjects[count] = new Rectangle(true,Color.red, 0, 0,30,30);
+//    count++;
+//    drawObjects[count] = new Rectangle(false,Color.blue, 50, 50,30,30);
+//    count++;
+
+
+    String fileName;
+    fileName = "lab20data.txt";
+    
+            
+ 
+   try {
+    Scanner fileScan = new Scanner(new File(fileName));
+    while (fileScan.hasNextLine()) {
+      
+      
+      boolean bool = false;
+      int fill = fileScan.nextInt();
+      int colorNum = fileScan.nextInt();
+      int x1 = fileScan.nextInt();
+      int y1 = fileScan.nextInt();
+      int x2 = fileScan.nextInt();
+      int y2 = fileScan.nextInt();
+      Color color = Color.red;
+      
+      
+      String inputLine = fileScan.nextLine();
+      if (inputLine.matches("\\d + \\d + \\d + \\d + \\d + \\d+")){
+        Scanner scan = new Scanner(inputLine);
+        fill = scan.nextInt();
+        colorNum = scan.nextInt();
+        x1 = scan.nextInt();
+        y1 = scan.nextInt();
+        x2 = scan.nextInt();
+        y2 = scan.nextInt();
+        
+      }
+
+      
+      if (fill == 1){
+        bool = true;
+      } else {
+        bool = false;
+      }
+    
+      if (colorNum == 1) {
+        color = Color.red;
+      } else if (colorNum == 2) {
+        color = Color.blue;
+      } else if (colorNum == 3) {
+        color = Color.green;
+      }
+      
+      drawObjects[count] = new Rectangle(bool,color, x1, y1,x2,y2);
+      count++;
+      
+    }
+    
+   } catch (FileNotFoundException e) {
+      System.out.println("File not found. Check file name and location.");
+      System.exit(1);
+   } 
+    setPreferredSize(new Dimension(300,300));
+    setBackground(Color.yellow);  
+  }  
+
+  /**each Rectangle will draw itself*/
+  public void paintComponent(Graphics g){
+    super.paintComponent(g);
+    for(int i = 0; i < count; i++){
+      drawObjects[i].draw(g);
+    } 
+  }
+}

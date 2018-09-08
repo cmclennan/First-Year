@@ -1,0 +1,24 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+
+public class Shape {
+  private int x;
+  private int y;
+  private int width;
+  private int height;
+  private Color colour;
+  
+  
+  public Shape() {
+  }
+  
+  public int randomRange(int lo, int hi){
+    
+  }
+  
+  
+  public void display(Graphics g) {
+  }
+}

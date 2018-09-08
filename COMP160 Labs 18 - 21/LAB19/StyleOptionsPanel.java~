@@ -1,0 +1,106 @@
+//********************************************************************
+//  StyleOptionsPanel.java      adapted from Java Foundations
+//
+//  Demonstrates the use of check boxes.
+//********************************************************************
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.Font;
+import java.awt.GridLayout;
+
+public class StyleOptionsPanel extends JPanel
+{
+   private JLabel saying;
+   private JCheckBox bold, italic;
+   private JRadioButton courier, times, helvetica;
+   private int style = Font.PLAIN;
+   private String typeFace = "Helvetica";
+   private JPanel panel;
+
+   //-----------------------------------------------------------------
+   //  Sets up a panel with a label and some check boxes that
+   //  control the style of the label's font.
+   //-----------------------------------------------------------------
+   public StyleOptionsPanel() {
+  
+
+     
+     
+      saying = new JLabel ("Say it with style!");
+      saying.setFont (new Font ("COURIER", style, 20));
+      saying.setFont (new Font ("TIMES NEW ROMAN", style, 20));
+      saying.setFont (new Font ("HELVETICA", style, 20));
+
+
+      bold = new JCheckBox ("Bold");
+      bold.setBackground (Color.cyan);
+      italic = new JCheckBox ("Italic");
+      italic.setBackground (Color.cyan);
+      times = new JRadioButton ("Courier");
+      times.setBackground (Color.cyan);
+      courier = new JRadioButton ("Times New Roman");
+      courier.setBackground(Color.cyan);
+      helvetica = new JRadioButton ("Helvetica");
+      helvetica.setBackground(Color.cyan);
+
+      StyleListener listener = new StyleListener();
+      bold.addItemListener (listener);
+      italic.addItemListener (listener);
+      courier.addItemListener (listener);
+      times.addItemListener (listener);
+      helvetica.addItemListener (listener);
+      
+      panel = new JPanel();
+      panel.setPreferredSize (new Dimension(400, 300));
+      panel.setBackground (Color.cyan);
+
+      panel.setLayout (new GridLayout(7,1));
+      panel.add (saying);
+      panel.add (bold);
+      panel.add (italic);
+      panel.add (courier);
+      panel.add (times);
+      panel.add (helvetica);
+      
+      setPreferredSize (new Dimension(400, 300));
+      setBackground (Color.cyan);
+      add(panel);
+
+
+      
+      
+   }
+
+   //*****************************************************************
+   //  Represents the listener for both check boxes.
+   //*****************************************************************
+   private class StyleListener implements ItemListener
+   {
+      //--------------------------------------------------------------
+      //  Updates the style of the label font style.
+      //--------------------------------------------------------------
+      public void itemStateChanged (ItemEvent event)
+      {
+         style = Font.PLAIN;
+
+         if (bold.isSelected())
+            style = Font.BOLD;
+
+         if (italic.isSelected())
+            style += Font.ITALIC;
+         
+         if (courier.isSelected()) {
+           saying.setFont(new Font("COURIER", style, 20));
+         } else if (times.isSelected()) {
+           saying.setFont(new Font("TIMES_NEW_ROMAN", style, 20));
+         } else if (helvetica.isSelected()) {
+           saying.setFont(new Font("HELVETICA", style, 20));
+         }
+
+         
+         
+      }
+   }
+}
